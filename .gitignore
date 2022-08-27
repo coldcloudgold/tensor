@@ -1,0 +1,9 @@
+
+# Ignore dynaconf secret files
+.secrets.*
+.env
+
+# Dirs
+__pycache__/
+.mypy_cache/
+text/

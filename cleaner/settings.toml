@@ -1,0 +1,32 @@
+default_encoding = "utf8"
+max_length_line = 80
+main_dir = "./text"
+
+[classification_settings]
+# Настроки классификации анализа данных 
+language = "Russian"
+length_low = 70
+length_high = 140
+stopwords_low = 0.2
+stopwords_high = 0.3
+max_link_density = 0.35
+no_headings = false
+max_heading_distance = 150
+
+[cleaning_settings]
+# Настройки очистки для класса lxml.html.clean.Cleaner
+processing_instructions = false
+remove_unknown_tags = false
+safe_attrs_only = false
+page_structure = false
+annoying_tags = false
+frames = false
+meta = false
+links = false
+javascript = false
+scripts = true
+comments = true
+style = true
+embedded = true
+forms = true
+kill_tags = ["head", "figcaption", "aside", "footer"]
