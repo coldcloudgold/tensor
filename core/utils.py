@@ -3,7 +3,6 @@ from typing import List, Optional
 from xml.sax.xmlreader import AttributesNSImpl
 
 import requests
-from fake_useragent import UserAgent
 from justext import get_stoplist
 from justext.core import PARAGRAPH_TAGS, Cleaner, Paragraph
 from justext.core import ParagraphMaker as DefaultParagraphMaker
@@ -17,8 +16,7 @@ def fetch_data(url: str, timeout: float = 2.0) -> Optional[str]:  # type: ignore
     """Функция возвращает данные со страницы."""
 
     try:
-        user_agent = UserAgent()
-        response = requests.get(url, timeout=timeout, headers={"User-Agent": user_agent.random})
+        response = requests.get(url, timeout=timeout)
         if response.status_code == 200:
             return response.content.decode(settings.default_encoding)
 
