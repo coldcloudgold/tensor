@@ -1,7 +1,7 @@
 import click
 
-from cleaner.config import logger, settings
-from cleaner.utils import default_data_handlder, fetch_data, url_to_path, write_data
+from core.config import logger, settings
+from core.utils import default_data_handlder, fetch_data, url_to_path, write_data
 
 
 @click.command()
@@ -32,10 +32,3 @@ def handle(url, main_dir):
 
 if __name__ == "__main__":
     handle()
-
-    """
-    https://runebook.dev/ru/docs/postgresql/indexes-types
-    https://postgrespro.ru/docs/postgresql/9.6/indexes-types
-    https://lenta.ru/news/2022/08/24/ze1/
-    https://www.gazeta.ru/politics/news/2022/08/27/18424118.shtml
-    """
